@@ -213,22 +213,25 @@ header .navbar ul li a:hover {
   /*flex: 1 1 40rem; */
 }
 .home .content img {
-  width: 40%;
-  margin-left: 35rem;
-  margin-top:  10rem;
+  width: 55%;
+  height: 50%;
+  margin-left: 62%;
+  margin-top:  20%;
   border-radius: 50%;
   position: : center;
 }
 .home .content h2 {
   font-size: 5rem;
+  width: 100%;
   font-weight: 800;
-  margin-left: 26rem;
+  margin-left: 40%;
   color: #a52a2f;
   text-align : center;
 }
 .home .content p {
   color: #a52a2f !important;
-  margin-left: 34rem;
+  margin-left: 60%;
+  width: 100%;
 }
 .projects h3 {
     color: #000000  !important;
@@ -505,7 +508,7 @@ header .navbar ul li a:hover {
   color: #011aff;
 }
 .resumebtn {
-  margin-left: 44rem;
+  margin-left: 76%;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;
