@@ -604,57 +604,115 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: #fff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  /* Modern light gradient background */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.skills h2 {
-  color: #000000;
+
+.skills h2, .skills .heading span {
+  color: #1a1a2e;
+  /* Deep, modern text color for headlines */
+  letter-spacing: 0.04em;
+  font-family: "Poppins", Arial, sans-serif;
 }
-.skills .heading span {
-  color: #000000;
-}
+
 .skills .container {
-  background: rgba(0, 0, 22, 0.4);
+  background: rgba(30, 40, 60, 0.72);
+  /* Slightly lighter, bluish glass effect for better contrast */
   color: #fff;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   width: 90%;
-  margin: auto;
-  margin-top: 2rem;
+  max-width: 1000px;
+  margin: 2.5rem auto 0 auto;
+  box-shadow: 0 4px 24px rgba(23, 32, 55, 0.18);
+  backdrop-filter: blur(2px);
 }
+
 .skills .container .row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 1.4rem;
+  margin: 0;
 }
+
+@media (max-width: 1200px) {
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .skills .container .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .skills .container .row {
+    grid-template-columns: 1fr;
+  }
+  .skills .container {
+    padding: 1rem;
+  }
+  
+  .skills.wordCloudWrapper {
+    position: relative;
+    width: 100%;
+    height: 600px; /* fixed height or responsive height if you prefer */
+  }
+  
+  .skills.wordCloudCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+}
+
+/* Skill bar card */
 .skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 12px;
+  padding: 16px;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
+  box-shadow: 0 2px 8px rgba(20, 20, 56, 0.22);
+  background: rgba(26, 26, 80, 0.94);
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  border: 1px solid rgba(80, 152, 255, 0.07);
+  position: relative;
+  overflow: hidden;
 }
+
 .skills .container .bar:hover {
-  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background-color: rgba(0, 0, 0, 0.9) !important;
+  box-shadow: 0 8px 24px rgba(80, 152, 255, 0.20), 0 4px 20px rgba(0,0,0,0.12);
+  background-color: rgba(40, 62, 110, 0.96);
+  transform: translateY(-3px) scale(1.03) rotate(-0.5deg);
 }
+
+/* Icon and label in each bar */
 .skills .container .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0;
 }
+
 .skills .container .bar .info i {
-  font-size: 4rem;
+  font-size: 2.7rem;
+  color: #51aaff;
+  filter: drop-shadow(0 0 5px #283eed88);
 }
+
 .skills .container .bar .info span {
-  font-size: 2rem;
-  font-weight: 500;
-  font-family: "Poppins";
-  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin-left: 0;
+  text-shadow: 0 2px 6px rgba(40, 62, 110, 0.04);
 }
+
 /* skills media queries starts*/
 @media screen and (max-width: 600px) {
   .skills .container {
